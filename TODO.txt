@@ -1,0 +1,1 @@
+- Halterung neu drucken (Lochabstand Rand: 8.5 mm, beide etwa 5,1 mm Durchmesser)
