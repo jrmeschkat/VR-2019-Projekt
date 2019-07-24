@@ -2,18 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-#region[RequireComponent(typeof(InteractionBehavoir)]
+using Leap.Unity;
+using Leap;
+using Leap.Unity.Interaction;
+
+[RequireComponent(typeof(InteractionBehaviour))]
 public class GraspLever : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private InteractionBehaviour interact;
+
     void Start()
     {
-        
+        interact = GetComponent<InteractionBehaviour>();
+        Debug.Log(interact);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+     
     }
 }
