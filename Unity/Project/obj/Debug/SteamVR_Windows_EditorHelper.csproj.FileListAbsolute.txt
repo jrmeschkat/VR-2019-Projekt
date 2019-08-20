@@ -212,3 +212,5 @@ D:\git\VR-2019-Projekt\Unity\Project\obj\Debug\SteamVR_Windows_EditorHelper.cspr
 D:\git\VR-2019-Projekt\Unity\Project\obj\Debug\SteamVR_Windows_EditorHelper.csproj.CopyComplete
 D:\git\VR-2019-Projekt\Unity\Project\obj\Debug\SteamVR_Windows_EditorHelper.dll
 D:\git\VR-2019-Projekt\Unity\Project\obj\Debug\SteamVR_Windows_EditorHelper.pdb
+D:\git\VR-2019-Projekt\Unity\Project\Temp\bin\Debug\InteractionEngineUtility.dll
+D:\git\VR-2019-Projekt\Unity\Project\Temp\bin\Debug\JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll

@@ -1,38 +1,50 @@
 ﻿using UnityEngine;
 using Leap.Unity.Interaction;
-using Leap.Unity;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(InteractionBehaviour))]
-public class GraspHandle : MonoBehaviour
-{
-    private InteractionBehaviour interact;
+public class GraspHandle : MonoBehaviour {
     private MaterialPropertyBlock mat;
-    private Renderer render;
 
-    void Start()
-    {
+    private InteractionBehaviour _interact;
+    private Renderer _render;
+    
+
+    private void OnEnable() {
         mat = new MaterialPropertyBlock();
         mat.SetColor("_Color", Color.red);
-        interact = GetComponent<InteractionBehaviour>();
-        render = GetComponent<Renderer>();
+
+        _interact = GetComponent<InteractionBehaviour>();
+        _render = GetComponent<Renderer>();
+
+        _interact.OnGraspedMovement -= onGrasp;
+        _interact.OnGraspedMovement += onGrasp;
     }
 
-    void Update()
-    {
-        if (interact.isGrasped)
-        {
-            render.SetPropertyBlock(mat);
-            var sourceHand = Hands.Get(Chirality.Right);
-            sourceHand = (sourceHand != null ? sourceHand : Hands.Get(Chirality.Left));
+    private void OnDisable() {
+        _interact.OnGraspedMovement -= onGrasp;
+    }
 
-            if(sourceHand != null)
-            {
-                
-            }
+    void Update() {
+        Debug.Log(_interact.rigidbody.rotation.eulerAngles);
+        if (_interact.isGrasped) {
+            _render.SetPropertyBlock(mat);
         }
-        else
-        {
-            render.SetPropertyBlock(null);
+        else {
+            _render.SetPropertyBlock(null);
         }
+    }
+
+    private void onGrasp(Vector3 prePos, Quaternion preRot, Vector3 pos, Quaternion rot, List<InteractionController> controller) {
+        Vector3 oldLocalRot = transform.localRotation.eulerAngles;
+        transform.rotation = rot;
+        Vector3 localRot = transform.localRotation.eulerAngles;
+
+        localRot.y = oldLocalRot.y;
+        localRot.z = oldLocalRot.z;
+
+        transform.localRotation = Quaternion.Euler( localRot);
+
+        Debug.Log(localRot);
     }
 }

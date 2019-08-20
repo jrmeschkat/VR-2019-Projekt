@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.project.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "E:\\Meschkat\\VR-2019-Projekt\\Unity\\Project\\actions.json",
+      "action_manifest_path": "D:\\git\\VR-2019-Projekt\\Unity\\Project\\actions.json",
       "strings": {
         "en_us": {
           "name": "Project [Testing]"

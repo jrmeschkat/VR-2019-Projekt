@@ -207,3 +207,5 @@ D:\git\VR-2019-Projekt\Unity\Project\obj\Debug\SteamVR.csproj.CoreCompileInputs.
 D:\git\VR-2019-Projekt\Unity\Project\obj\Debug\SteamVR.csproj.CopyComplete
 D:\git\VR-2019-Projekt\Unity\Project\obj\Debug\SteamVR.dll
 D:\git\VR-2019-Projekt\Unity\Project\obj\Debug\SteamVR.pdb
+D:\git\VR-2019-Projekt\Unity\Project\Temp\bin\Debug\InteractionEngineUtility.dll
+D:\git\VR-2019-Projekt\Unity\Project\Temp\bin\Debug\JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll
